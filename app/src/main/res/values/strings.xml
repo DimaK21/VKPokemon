@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VK Pokemon</string>
+    <string name="pokemon">Pokemon</string>
+    <string name="error">Error</string>
 </resources>
