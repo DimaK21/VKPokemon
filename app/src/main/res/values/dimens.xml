@@ -2,4 +2,8 @@
 <resources>
     <dimen name="title_margin_v">24dp</dimen>
     <dimen name="_8dp">8dp</dimen>
+    <dimen name="card_height">80dp</dimen>
+    <dimen name="card_corner">24dp</dimen>
+    <dimen name="icon_corner">16dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
 </resources>

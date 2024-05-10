@@ -2,4 +2,5 @@
     <string name="app_name">VK Pokemon</string>
     <string name="pokemon">Pokemon</string>
     <string name="error">Error</string>
+    <string name="pokemon_icon">pokemon icon</string>
 </resources>
