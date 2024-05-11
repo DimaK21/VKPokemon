@@ -12,8 +12,8 @@ object PokemonInfoResponsePokemonMapper {
             name = pokemonInfoResponse.name,
             icon = icon,
             forms = pokemonInfoResponse.forms.map { it.name },
-            height = pokemonInfoResponse.height,
-            weight = pokemonInfoResponse.weight,
+            height = pokemonInfoResponse.height / 10f,
+            weight = pokemonInfoResponse.weight / 10f,
             abilities = pokemonInfoResponse.abilities.map { it.ability.name }
         )
     }

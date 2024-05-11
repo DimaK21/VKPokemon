@@ -6,8 +6,8 @@
     <string name="check_connection">Check your internet connection</string>
     <string name="app_error">Application error</string>
     <string name="refresh">Refresh</string>
-    <string name="height">Height: %d dm</string>
-    <string name="weight">Weight: %d dg</string>
+    <string name="height">Height: %.1f m</string>
+    <string name="weight">Weight: %.1f kg</string>
     <string name="forms">Forms: %s</string>
     <string name="abilities">Abilities: %s</string>
 
