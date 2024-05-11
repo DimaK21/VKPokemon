@@ -5,4 +5,5 @@
     <string name="pokemon_icon">pokemon icon</string>
     <string name="check_connection">Check your internet connection</string>
     <string name="app_error">Application error</string>
+    <string name="refresh">Refresh</string>
 </resources>

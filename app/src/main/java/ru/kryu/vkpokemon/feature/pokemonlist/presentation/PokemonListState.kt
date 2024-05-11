@@ -5,6 +5,6 @@ import ru.kryu.vkpokemon.feature.pokemonlist.domain.model.PokemonPack
 sealed class PokemonListState {
     data object Loading : PokemonListState()
     data class Error(val error: String) : PokemonListState()
-    data class Content(val content: List<PokemonPack>, var isBottomLoading: Boolean = false) :
+    data class Content(val content: PokemonPack, var isBottomLoading: Boolean = false) :
         PokemonListState()
 }
