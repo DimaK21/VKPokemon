@@ -8,6 +8,7 @@
     <string name="refresh">Refresh</string>
     <string name="height">Height: %d dm</string>
     <string name="weight">Weight: %d dg</string>
-    <string name="forms">Possible forms: %s</string>
+    <string name="forms">Forms: %s</string>
+    <string name="abilities">Abilities: %s</string>
 
 </resources>

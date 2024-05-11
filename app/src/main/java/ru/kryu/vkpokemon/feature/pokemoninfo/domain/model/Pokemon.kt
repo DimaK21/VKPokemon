@@ -7,4 +7,5 @@ data class Pokemon(
     val forms: List<String>,
     val height: Int,
     val weight: Int,
+    val abilities: List<String>,
 )

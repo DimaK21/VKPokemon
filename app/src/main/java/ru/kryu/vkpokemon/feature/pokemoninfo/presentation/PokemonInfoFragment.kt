@@ -68,6 +68,7 @@ class PokemonInfoFragment : Fragment() {
         binding.tvHeight.text = getString(R.string.height, pokemon.height)
         binding.tvWeight.text = getString(R.string.weight, pokemon.weight)
         binding.tvForms.text = getString(R.string.forms, pokemon.forms.toString())
+        binding.tvAbility.text = getString(R.string.abilities, pokemon.abilities.toString())
         Glide.with(requireContext())
             .load(pokemon.icon)
             .placeholder(R.drawable.pokemon_placeholder)

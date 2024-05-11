@@ -10,24 +10,13 @@
         android:id="@+id/iv_icon"
         android:layout_width="match_parent"
         android:layout_height="@dimen/big_image"
+        android:layout_marginTop="@dimen/title_margin_top"
         android:contentDescription="@string/pokemon_icon"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/backgrounds/scenic" />
-
-    <TextView
-        android:id="@+id/tv_name"
-        style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_8dp"
-        android:layout_marginBottom="@dimen/_8dp"
-        app:layout_constraintBottom_toBottomOf="@id/iv_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Pikachu" />
 
     <ScrollView
         android:id="@+id/scroll_view"
@@ -43,6 +32,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_8dp"
+                android:layout_marginStart="@dimen/_8dp"
+                tools:text="Pikachu" />
 
             <TextView
                 android:id="@+id/tv_height"
@@ -70,6 +68,15 @@
                 android:layout_marginVertical="@dimen/_8dp"
                 android:layout_marginStart="@dimen/_8dp"
                 android:text="@string/forms" />
+
+            <TextView
+                android:id="@+id/tv_ability"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_8dp"
+                android:layout_marginStart="@dimen/_8dp"
+                android:text="@string/abilities" />
         </LinearLayout>
     </ScrollView>
 
@@ -99,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
-        app:constraint_referenced_ids="tv_name, scroll_view, iv_icon" />
+        app:constraint_referenced_ids="scroll_view, iv_icon" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group_error"
