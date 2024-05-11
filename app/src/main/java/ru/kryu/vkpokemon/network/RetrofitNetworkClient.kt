@@ -33,7 +33,7 @@ class RetrofitNetworkClient @Inject constructor(
         }
     }
 
-    private fun getPokemonList(limit: Int, offset: Int): Response {
+    private suspend fun getPokemonList(limit: Int, offset: Int): Response {
         return try {
             val response = pokemonApiService.getPokemonList(limit, offset)
             if (response.code() == CODE_SUCCESS) {
@@ -54,7 +54,7 @@ class RetrofitNetworkClient @Inject constructor(
         }
     }
 
-    private fun getPokemonInfo(id: Int): Response {
+    private suspend fun getPokemonInfo(id: Int): Response {
         return try {
             val response = pokemonApiService.getPokemonInfo(id)
             if (response.code() == CODE_SUCCESS) {

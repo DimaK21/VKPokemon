@@ -1,6 +1,7 @@
 package ru.kryu.vkpokemon.feature.pokemonlist.presentation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -79,9 +80,11 @@ class PokemonListFragment : Fragment() {
                             (binding.recyclerView.layoutManager as LinearLayoutManager).findLastVisibleItemPosition()
                         val itemsCount = pokemonListAdapter!!.itemCount
                         if (position >= itemsCount - 1) {
+                            Log.d("MyTag", "position >= itemsCount - 1")
                             if (viewModel.screenState.value is PokemonListState.Content &&
                                 !(viewModel.screenState.value as PokemonListState.Content).isBottomLoading
                             ) {
+                                Log.d("MyTag", "getNextPage")
                                 viewModel.getNextPage()
                             }
                         }

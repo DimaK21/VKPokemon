@@ -10,11 +10,11 @@ import ru.kryu.vkpokemon.feature.pokemonlist.data.network.dto.PokemonListRespons
 interface PokemonApiService {
 
     @GET("pokemon")
-    fun getPokemonList(
+    suspend fun getPokemonList(
         @Query("limit") limit: Int,
         @Query("offset") offset: Int
     ): Response<PokemonListResponse>
 
     @GET("pokemon/{id}")
-    fun getPokemonInfo(@Path("id") id: Int): Response<PokemonInfoResponse>
+    suspend fun getPokemonInfo(@Path("id") id: Int): Response<PokemonInfoResponse>
 }
