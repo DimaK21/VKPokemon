@@ -7,8 +7,9 @@ import ru.kryu.vkpokemon.R
 import ru.kryu.vkpokemon.feature.pokemoninfo.data.network.dto.PokemonInfoRequest
 import ru.kryu.vkpokemon.feature.pokemonlist.data.network.dto.PokemonListRequest
 import ru.kryu.vkpokemon.util.ConnectionChecker
+import javax.inject.Inject
 
-class RetrofitNetworkClient constructor(
+class RetrofitNetworkClient @Inject constructor(
     private val pokemonApiService: PokemonApiService,
     private val context: Context,
 ) : NetworkClient {

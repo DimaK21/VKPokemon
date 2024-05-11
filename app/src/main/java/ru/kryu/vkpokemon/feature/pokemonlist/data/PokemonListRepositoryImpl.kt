@@ -10,8 +10,9 @@ import ru.kryu.vkpokemon.feature.pokemonlist.domain.model.PokemonPack
 import ru.kryu.vkpokemon.network.NetworkClient
 import ru.kryu.vkpokemon.network.RetrofitNetworkClient
 import ru.kryu.vkpokemon.util.Resource
+import javax.inject.Inject
 
-class PokemonListRepositoryImpl constructor(
+class PokemonListRepositoryImpl @Inject constructor(
     private val networkClient: NetworkClient
 ) : PokemonListRepository {
 

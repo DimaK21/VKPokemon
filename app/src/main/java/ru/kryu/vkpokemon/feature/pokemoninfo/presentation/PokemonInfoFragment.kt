@@ -5,12 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 import ru.kryu.vkpokemon.databinding.FragmentPokemonInfoBinding
 
+@AndroidEntryPoint
 class PokemonInfoFragment : Fragment() {
 
     private var _binding: FragmentPokemonInfoBinding? = null
     private val binding get() = _binding!!
+    private val viewModel: PokemonInfoViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
