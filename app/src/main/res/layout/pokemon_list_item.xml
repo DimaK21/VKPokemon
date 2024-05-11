@@ -29,7 +29,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8dp"
-            tools:text="Pikachu" />
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="Pikachu Pikachu" />
 
     </LinearLayout>
 
