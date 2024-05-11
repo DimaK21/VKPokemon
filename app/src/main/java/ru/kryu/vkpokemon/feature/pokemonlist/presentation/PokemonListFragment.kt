@@ -19,6 +19,7 @@ import ru.kryu.vkpokemon.R
 import ru.kryu.vkpokemon.databinding.FragmentPokemonListBinding
 import ru.kryu.vkpokemon.feature.pokemoninfo.presentation.PokemonInfoFragment
 import ru.kryu.vkpokemon.feature.pokemonlist.domain.model.PokemonPack
+import ru.kryu.vkpokemon.feature.pokemonlist.presentation.recycler.PokemonAdapter
 
 @AndroidEntryPoint
 class PokemonListFragment : Fragment() {
@@ -60,7 +61,7 @@ class PokemonListFragment : Fragment() {
                             state.isBottomLoading
                         )
 
-                        is PokemonListState.Error -> showError(state.error)
+                        PokemonListState.Error -> showError()
                         PokemonListState.Loading -> showLoading()
                     }
                 }
@@ -107,7 +108,7 @@ class PokemonListFragment : Fragment() {
         pokemonListAdapter!!.addPokemonList(content.pokemonList)
     }
 
-    private fun showError(message: String) {
+    private fun showError() {
         binding.recyclerView.visibility = View.GONE
         binding.progressBarBottom.visibility = View.GONE
         binding.progressBarCenter.visibility = View.GONE

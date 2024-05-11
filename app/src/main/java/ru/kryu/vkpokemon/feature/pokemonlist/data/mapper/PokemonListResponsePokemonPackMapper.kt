@@ -11,8 +11,8 @@ object PokemonListResponsePokemonPackMapper {
         val offset = uri.getQueryParameter("offset")
         return PokemonPack(
             count = pokemonListResponse.count,
-            nextlimit = limit,
-            nextoffset = offset,
+            nextLimit = limit?.toIntOrNull(),
+            nextOffset = offset?.toIntOrNull(),
             pokemonList = pokemonListResponse.results.map {
                 ResultDtoPokemonItemMapper.map(it)
             }.toMutableList(),

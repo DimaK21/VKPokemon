@@ -1,4 +1,4 @@
-package ru.kryu.vkpokemon.feature.pokemonlist.presentation
+package ru.kryu.vkpokemon.feature.pokemonlist.presentation.recycler
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

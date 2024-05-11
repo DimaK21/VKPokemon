@@ -1,4 +1,4 @@
-package ru.kryu.vkpokemon.feature.pokemonlist.presentation
+package ru.kryu.vkpokemon.feature.pokemonlist.presentation.recycler
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
