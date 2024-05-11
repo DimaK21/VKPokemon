@@ -11,6 +11,7 @@ import ru.kryu.vkpokemon.feature.pokemoninfo.data.network.dto.pokemoninfoinner.S
 import ru.kryu.vkpokemon.feature.pokemoninfo.data.network.dto.pokemoninfoinner.Sprites
 import ru.kryu.vkpokemon.feature.pokemoninfo.data.network.dto.pokemoninfoinner.Stat
 import ru.kryu.vkpokemon.feature.pokemoninfo.data.network.dto.pokemoninfoinner.Type
+import ru.kryu.vkpokemon.network.Response
 
 data class PokemonInfoResponse(
     val abilities: List<Ability>,
@@ -40,4 +41,4 @@ data class PokemonInfoResponse(
     val stats: List<Stat>,
     val types: List<Type>,
     val weight: Int
-)
+) : Response()
