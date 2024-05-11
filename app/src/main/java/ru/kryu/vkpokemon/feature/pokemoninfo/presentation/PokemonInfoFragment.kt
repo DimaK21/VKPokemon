@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,5 +33,11 @@ class PokemonInfoFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    companion object {
+        private const val POKEMON_ID = "POKEMON_ID"
+        fun createArgs(pokemonId: Int): Bundle =
+            bundleOf(POKEMON_ID to pokemonId)
     }
 }
