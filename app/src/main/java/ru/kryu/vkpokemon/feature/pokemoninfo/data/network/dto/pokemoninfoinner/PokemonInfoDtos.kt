@@ -44,21 +44,21 @@ data class Species(
 
 data class Sprites(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_female")
-    val backFemale: String,
+    val backFemale: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("back_shiny_female")
-    val backShinyFemale: String,
+    val backShinyFemale: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String,
+    val frontShinyFemale: String?,
     val other: Other,
     val versions: Versions
 )
@@ -149,46 +149,46 @@ data class Versions(
 
 data class DreamWorld(
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: Any?
+    val frontFemale: String?
 )
 
 data class Home(
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class OfficialArtwork(
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String
+    val frontShiny: String?
 )
 
 data class Showdown(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_female")
-    val backFemale: String,
+    val backFemale: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("back_shiny_female")
-    val backShinyFemale: Any?,
+    val backShinyFemale: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class GenerationI(
@@ -243,249 +243,249 @@ data class GenerationViii(
 
 data class RedBlue(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_gray")
-    val backGray: String,
+    val backGray: String?,
     @SerializedName("back_transparent")
-    val backTransparent: String,
+    val backTransparent: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_gray")
-    val frontGray: String,
+    val frontGray: String?,
     @SerializedName("front_transparent")
-    val frontTransparent: String
+    val frontTransparent: String?
 )
 
 data class Yellow(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_gray")
-    val backGray: String,
+    val backGray: String?,
     @SerializedName("back_transparent")
-    val backTransparent: String,
+    val backTransparent: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_gray")
-    val frontGray: String,
+    val frontGray: String?,
     @SerializedName("front_transparent")
-    val frontTransparent: String
+    val frontTransparent: String?
 )
 
 data class Crystal(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("back_shiny_transparent")
-    val backShinyTransparent: String,
+    val backShinyTransparent: String?,
     @SerializedName("back_transparent")
-    val backTransparent: String,
+    val backTransparent: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_transparent")
-    val frontShinyTransparent: String,
+    val frontShinyTransparent: String?,
     @SerializedName("front_transparent")
-    val frontTransparent: String
+    val frontTransparent: String?
 )
 
 data class Gold(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_transparent")
-    val frontTransparent: String
+    val frontTransparent: String?
 )
 
 data class Silver(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_transparent")
-    val frontTransparent: String
+    val frontTransparent: String?
 )
 
 data class Emerald(
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String
+    val frontShiny: String?
 )
 
 data class FireredLeafgreen(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String
+    val frontShiny: String?
 )
 
 data class RubySapphire(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String
+    val frontShiny: String?
 )
 
 data class DiamondPearl(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_female")
-    val backFemale: String,
+    val backFemale: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("back_shiny_female")
-    val backShinyFemale: String,
+    val backShinyFemale: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class HeartgoldSoulsilver(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_female")
-    val backFemale: String,
+    val backFemale: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("back_shiny_female")
-    val backShinyFemale: String,
+    val backShinyFemale: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class Platinum(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_female")
-    val backFemale: String,
+    val backFemale: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("back_shiny_female")
-    val backShinyFemale: String,
+    val backShinyFemale: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class BlackWhite(
     val animated: Animated,
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_female")
-    val backFemale: String,
+    val backFemale: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("back_shiny_female")
-    val backShinyFemale: String,
+    val backShinyFemale: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class Animated(
     @SerializedName("back_default")
-    val backDefault: String,
+    val backDefault: String?,
     @SerializedName("back_female")
-    val backFemale: String,
+    val backFemale: String?,
     @SerializedName("back_shiny")
-    val backShiny: String,
+    val backShiny: String?,
     @SerializedName("back_shiny_female")
-    val backShinyFemale: String,
+    val backShinyFemale: String?,
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class OmegarubyAlphasapphire(
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class XY(
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class Icons(
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: Any?
+    val frontFemale: String?
 )
 
 data class UltraSunUltraMoon(
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String,
+    val frontFemale: String?,
     @SerializedName("front_shiny")
-    val frontShiny: String,
+    val frontShiny: String?,
     @SerializedName("front_shiny_female")
-    val frontShinyFemale: String
+    val frontShinyFemale: String?
 )
 
 data class IconsX(
     @SerializedName("front_default")
-    val frontDefault: String,
+    val frontDefault: String?,
     @SerializedName("front_female")
-    val frontFemale: String
+    val frontFemale: String?
 )
 
 data class StatX(
