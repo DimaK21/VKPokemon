@@ -29,6 +29,7 @@ class PokemonAdapter(private val clickListener: PokemonItemClickListener) :
     fun addPokemonList(newPokemonList: List<PokemonItem>) {
         val diffCallback = PokemonDiffCallback(pokemonList, newPokemonList)
         val diffPokemon = DiffUtil.calculateDiff(diffCallback)
+        pokemonList.clear()
         pokemonList.addAll(newPokemonList)
         diffPokemon.dispatchUpdatesTo(this)
     }

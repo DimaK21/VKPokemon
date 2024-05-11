@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import ru.kryu.vkpokemon.feature.pokemonlist.domain.PokemonListUseCase
+import ru.kryu.vkpokemon.feature.pokemonlist.domain.model.PokemonPack
 import ru.kryu.vkpokemon.util.Resource
 import ru.kryu.vkpokemon.util.SingleLiveEvent
 import javax.inject.Inject
@@ -38,8 +39,10 @@ class PokemonListViewModel @Inject constructor(private val pokemonListUseCase: P
             val limit = (_screenState.value as PokemonListState.Content).content.nextLimit
             val offset = (_screenState.value as PokemonListState.Content).content.nextOffset
             if (limit != null && offset != null) {
+                val temp = _screenState.value as PokemonListState.Content
+                _screenState.value =
+                    PokemonListState.Content(content = temp.content, isBottomLoading = true)
                 getPokemon(limit, offset)
-                (_screenState.value as PokemonListState.Content).isBottomLoading = true
             }
         }
 
@@ -51,7 +54,10 @@ class PokemonListViewModel @Inject constructor(private val pokemonListUseCase: P
                 when (resource) {
                     is Resource.Error -> {
                         if (_screenState.value is PokemonListState.Content) {
-                            (_screenState.value as PokemonListState.Content).isBottomLoading = false
+                            val temp = _screenState.value as PokemonListState.Content
+                            _screenState.value = PokemonListState.Content(
+                                content = temp.content, isBottomLoading = false
+                            )
                         } else {
                             _screenState.value = PokemonListState.Error
                         }
@@ -60,13 +66,15 @@ class PokemonListViewModel @Inject constructor(private val pokemonListUseCase: P
 
                     is Resource.Success -> {
                         if (_screenState.value is PokemonListState.Content) {
-                            with(_screenState.value as PokemonListState.Content) {
-                                isBottomLoading = false
-                                content.nextLimit = resource.data?.nextLimit
-                                content.nextOffset = resource.data?.nextOffset
-                                content.pokemonList.addAll(resource.data?.pokemonList!!)
-                            }
-
+                            val temp = _screenState.value as PokemonListState.Content
+                            _screenState.value = PokemonListState.Content(
+                                content = PokemonPack(
+                                    count = resource.data!!.count,
+                                    nextLimit = resource.data.nextLimit,
+                                    nextOffset = resource.data.nextOffset,
+                                    pokemonList = (temp.content.pokemonList + resource.data.pokemonList).toMutableList()
+                                ), isBottomLoading = false
+                            )
                         } else {
                             _screenState.value = PokemonListState.Content(resource.data!!)
                         }
